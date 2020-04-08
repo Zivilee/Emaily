@@ -5,7 +5,7 @@ const keys = require("../config/keys");
 
 const User = mongoose.model("users");
 
-//put identifying pieco of info into cookie
+//put identifying piece of info into cookie
 passport.serializeUser((user, done) => {
   done(null, user.id);
 });

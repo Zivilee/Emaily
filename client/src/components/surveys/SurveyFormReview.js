@@ -36,10 +36,12 @@ const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
     </div>
   );
 };
+
+//to pull values out of redux store we always use a function and by convention we call it mapStateToProps
 function mapStateToProps(state) {
   return { formValues: state.form.surveyForm.values };
 }
-
+// then we connect as first argument "mapStateToProps"
 export default connect(
   mapStateToProps,
   actions
